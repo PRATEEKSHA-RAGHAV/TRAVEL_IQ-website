@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .nav {
+            list-style-type: none;
+            display: flex;
+
+
+            justify-content: center;
+            background-color: rgba(240, 128, 128, 0.082);
+
+
+        }
+
+        .nav li {
+
+            color: rgba(0, 0, 0, 0.849);
+            font-weight: 800;
+            font-size: 20px;
+            /* height: 60px; */
+            align-content: center;
+            margin: 20px 10px 20px 10px;
+        }
+
+        .stick {
+            color: gainsboro !important;
+        }
+
+        .box {
+
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+            background-color: #f85920;
+            text-shadow: 3px 3px 5px black;
+            color: white !important;
+            opacity: 0.9;
+
+
+        }
+
+        .whatone {
+            display: flex;
+            margin-top: -5px;
+        }
+
+        .what {
+            width: 59px;
+            height: 52px;
+            margin-top: 20px;
+            margin-left: 10px;
+
+        }
+
+        .div {
+            display: flex;
+
+
+        }
+
+        .iqlogo {
+            display: flex;
+            margin-right: 50px;
+
+        }
+
+        .logo {
+            width: 230px;
+            height: 63px;
+            margin: 5px;
+            margin-left: -45px;
+
+        }
+
+        /* bg image */
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg {
+            position: relative;
+            background: url('/images/traveliq.jpg') no-repeat center;
+            background-size: cover;
+            width: 100%;
+            height: 75vh;
+            padding-left: 20px;
+        }
+
+
+
+
+        .heading {
+            position: absolute;
+            color: white;
+            font-size: 35px;
+            top: 10%;
+
+        }
+
+        .form-container {
+
+            background-color: white;
+            /* Set your desired background color */
+            padding: 15px;
+            /* Add some padding */
+            border-radius: 15px;
+            /* Optional: adds rounded corners */
+            max-width: 750px;
+            /* Optional: sets a max width for the form */
+            color: rgba(0, 0, 0, 0.829);
+            border-style: none;
+            outline: none;
+        }
+
+        .part2 {
+            color: black;
+            text-align: center;
+
+        }
+
+
+
+        /* .main-box {
+            display: flex;
+            flex-direction: column;
+            background-color: red;
+            margin: 30px;
+        }
+
+        .box1 {
+            display: flex;
+
+            margin-bottom: 4px;
+            justify-content: space-around;
+            border: 1px soild black;
+
+            margin-left: 10px;
+        }
+
+        .box1>div,
+        .box2>div {
+            border: 1px solid black;
+            margin-right: 3px;
+            background-color: pink;
+            padding: 50px;
+        }
+
+        .box2 {
+            display: flex;
+            justify-content: space-around;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 50px;
+            margin-left: 10px;
+
+        } */
+        .cards {
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            align-content: space-between;
+            gap: 20px;
+            padding: auto;
+            margin: 0 130px 0 130px;
+
+
+
+        }
+
+        .cards div {
+            width: 100%;
+            height: 100%;
+            align-content: space-around;
+            background-color: #f85920;
+            border-radius: 10px 10px 10px 10px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+
+
+        }
+
+        .dabba .circle {
+
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: 10px 30px 0 30px;
+        }
+
+        .dabba {
+            text-align: center;
+            padding: 40px 0 40px 0;
+        }
+
+
+
+        /* part 3 */
+        .forbgcolor {
+            background-color: rgba(240, 128, 128, 0.082);
+        }
+
+        .part3 {
+            margin: 0 0 0 130px;
+            display: flex;
+
+            height: auto;
+            text-align: justify;
+
+        }
+
+        
+
+        #content1 {
+            width: 600px;
+        }
+
+        #content2 {
+            margin: 70px 52px 0px 40px;
+        }
+
+        .one {
+            display: grid;
+            grid-template-columns: 260px 260px;
+            grid-template-rows: auto auto;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .two {
+
+            padding: 10px;
+            display: flex;
+            text-align: left;
+            font-weight: 700;
+            gap: 20px;
+            font-size: 25px;
+
+            justify-content: center;
+        }
+
+        /* middlle image */
+
+        /* .backimg{
+           position: relative;
+            background: url(/middleimage.jpg) no-repeat center ;
+            background-size: cover;
+           top: 0;
+           bottom: 0;
+           z-index: ;
+        } */
+
+        /*  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    background-attachment: fixed;
+    background: url('/middleimage.jpg') no-repeat center;
+    background-size: cover;
+   width: 100%;
+    height: 100%; */
+
+
+        /* .background-image {
+  
+    object-fit: cover; 
+   
+    
+} 
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center; 
+    overflow-y: auto;
+    
+}*/
+        .fixed-background-box {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            /* Adjust height as needed */
+            background: url('/images/middleimage.jpg') no-repeat center;
+
+            /* background: url('/your-image.jpg') no-repeat center center; */
+            background-size: cover;
+            background-attachment: fixed;
+            /* Fix the background image */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent overlay */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .lastflex {
+            display: flex;
+
+            background-color: rgba(240, 128, 128, 0.082);
+            align-items: start;
+
+
+            text-align: start;
+
+        }
+
+        .col {
+
+            list-style-type: none;
+            color: rgba(128, 128, 128, 0.918);
+            margin-top: 40px;
+            justify-content: start;
+            align-items: start;
+            align-content: start;
+            justify-content: start;
+            text-align: start;
+        }
+
+        li {
+
+            align-content: start;
+
+            text-align: start;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .carousel slide {
+            margin-left: 50%;
+            margin-right: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="iqlogo">
+            <img src="/images/traveliQ-logo.png" alt="traveliQ-logo" class="logo">
+        </div>
+        <div class="div">
+            <li>Home</li>
+            <li class="stick">|</li>
+            <li>About</li>
+            <li class="stick">|</li>
+            <li>Services</li>
+            <li class="stick">|</li>
+            <li>Video Gallery</li>
+            <li class="stick">|</li>
+            <li>Contact</li>
+            <li class="stick">|</li>
+            <li>Pay us</li>
+            <li class="box">Plans & Pricing</li>
+        </div>
+
+        <div class="whatone">
+            <img src="/images/whatsapplogo.png" alt="whatsaap" class="what">
+        </div>
+
+    </div>
+    <!-- bg image -->
+    <div class="main">
+        <div class="bg">
+
+
+            <div class="heading">
+                <h1>Travel Agency in Gurgaon</h1>
+                <p style="font-size: 25px; padding: 30px 0 0px 18px ;">Know More to Become an IRCTC Travel Agent</p>
+                <br>
+                <div class="form">
+                    <form action="mailto: pratisharajput930@gmail.com" method="post" target="_blank" autocomplete="on" ;
+                        class="form-container">
+
+                        <label for="name" style=" font-size: 25px; font-weight: 600; ">Simply request a callback to
+                            obtain Your IRCTC Rail ID</label><br>
+                        <!-- input feild -->
+                        <input type="text" placeholder="Enter your name"
+                            style="  margin-top: 25px; border-radius: 10px; padding: 10px 60px 10px 30px; ; font-size: 20px;">
+                        <input type="text" placeholder="Enter your number"
+                            style="border-radius: 10px; padding: 10px 60px 10px 30px; margin-left: 12px; font-size: 20px; ">
+                        <!-- submit button -->
+                        <button
+                            style=" border: none; padding: 10px; border-radius: 30px 30px 30px 30px;width: 170px; text-align: center; margin-bottom: 20px; margin-top: 25px;  background-color: #f84c1ce5; color: white; font-size:15px ;">Submit</button>
+
+
+                        </button>
+
+                        <!-- whatsapp button -->
+                        <button type="button" onclick="window.open('https://www.whatsapp.com/', '_blank')"
+                            style="border: none; padding: 10px; border-radius: 30px; width: 180px; text-align: center; background-color: rgb(48, 165, 48); color: white; font-size: 15px;">
+                            <img src="/images//whatsapp-brands-solid (3).svg" alt="image" width="20px;" height="20px;"
+                                style="margin-bottom: -4px; margin-right: 8px;">Whatsapp us
+                        </button>
+
+                        <!-- <button type="button" onclick="window.open('https://www.whatsapp.com/', '_blank')" style="border: none; padding: 10px; border-radius: 30px 30px 30px 30px;width: 180px; text-align: center; background-color: rgb(35, 148, 35);color: white; font-size:15px"><img src="/whatsapp-brands-solid (3).svg" alt="image" width="20px;"   height="20px;" style=" margin-bottom: -4px ; margin-right: 8px;">Whatsapp us</button> -->
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="part2">
+        <h2 style="color: #ff4500; margin:50px 0 16px 0;font-size: x-largessslarge;font-weight: 900;">Our Services</h2>
+        <h1 style="margin: 20px; font-weight: 900; font-size: 50px;">Best Travel Services in India</h1>
+        <p style="font-size: 20px; color: rgb(107, 107, 107);">Travel IQ is the best travel agent for Air tickets,
+            Railway reservations, Bus Ticket, Hotel
+            Bookings, Tour Packages & VISA assistance.</p>
+
+
+
+    </div>
+
+
+
+    <!-- making cards -->
+    <div class="cards">
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images//plane-departure-solid.svg" alt="plane"
+                    style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>Air Tickets</h2>
+            <p>Travel IQ is offering the cheapest fares for all domestic &amp; International air tickets.
+            <p>
+
+        </div>
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images/bus-simple-solid.svg" alt="bus"
+                    style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>Bus Tickets</h2>
+            <p>TraveliQ is India's leading provider of online bus ticketing services that provide comfortable bus and
+                train travel.</p>
+        </div>
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images/hotel-solid (2).svg" alt="hotal"
+                    style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>Hotel Booking</h2>
+            <p>You can get the latest deals and offers on hotel bookings all over the world.</p>
+        </div>
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images/umbrella-beach-solid (1).svg" alt="umbrella"
+                    style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>IRCTC Domestic Packages</h2>
+            <p>Book Branded IRCTC Domestic tour packages and earn commission.</p>
+        </div>
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images/umbrella-beach-solid (1).svg" alt="umbrella"
+                    style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>Tour Packages</h2>
+            <p>Best tour packages for domestic and international holidays</p>
+        </div>
+        <div class="dabba">
+            <div class="circle">
+                <img src="/images/train-solid.svg" alt="train" style="width: 43px; height: 43px; padding: auto; margin: 30px;">
+            </div>
+            <h2>IRCTC Agency</h2>
+            <p>IRCTC Agent Registration in very affordable price. OTP and DC Based Login Authentication</p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="main-box">
+        <div class="box1">
+            <div id="card">
+                <img src="/hotel-solid (1).svg" alt="img" width="50px" height="50px">
+            </div>
+            <div id="card">2</div>
+            <div id="card">3</div>
+
+        </div>
+        <div class="box2">
+            <div id="card">1 </div>
+            <div id="card">2</div>
+            <div id="card">3</div>
+
+        </div>
+    </div> -->
+    <!-- part 3 -->
+    <div class="forbgcolor">
+        <div class="part3">
+            <div class="content" id="content1">
+                <h2 style="color: #f85920; padding: 30px 30px 30px 0; font-size:25px; font-weight: 600;">Why We Better
+                </h2>
+                <h1 style="font-weight: 900; font-size: 50px; padding: 10px 20px 20px 0;">TraveliQ</h1>
+                <h1 style="font-weight: 600; padding-bottom: 20px;">Your Own Travel Intelligence</h1>
+                <p style="font-size: 20px; padding: 0 0 10px 0;  color: rgba(0, 0, 0, 0.897);"> <b>Travel IQ Services
+                    </b>
+                    is India’s best IRCTC principal
+                    agent and an IATA accredited travel agency.</p>
+                <p style=" font-size: 20px; padding: 10px;  color: rgba(0, 0, 0, 0.897);"><b>Founded in 2014</b>, Travel
+                    IQ
+                    has its corporate headquarters in Gurugram,
+                    the IT capital of Delhi/NCR. Since then, it has routinely made significant gains in the market. In
+                    2017,
+                    the company received recognition from IATA (International Air Transport Group), the most prestigious
+                    airline trade association that today represents the majority of overall air traffic, just three
+                    years
+                    after its founding.</p>
+                <p style=" font-size: 20px; padding: 10px;  color: rgba(0, 0, 0, 0.897);">In 2016, the company launched
+                    its
+                    web portal, https://b2b.traveliq.in, which is providing the online
+                    services for domestic and international air ticket, bus tickets, railway reservation, hotel booking,
+                    visa assistance, tour packages and UTI Pan Card Services.</p>
+                <p style=" font-size: 20px; padding: 10px;  color: rgba(0, 0, 0, 0.897);">Anticipating the digital shift
+                    that would disrupt the travel sector. The site is
+                    primarily intended for online travel assistance, with a concentration on the B2B trade module. The
+                    website has over 150000 registered agents, many of whom are regarded as some of the most
+                    knowledgeable
+                    professionals in the industry.</p>
+                <p style=" font-size: 20px; padding: 10px;  color: rgba(0, 0, 0, 0.897);"><b>TraveliQ is available in
+                        many
+                        states & dominions in India, such as</b></p>
+                <p style=" font-size: 20px; padding: 10px;  color: rgba(0, 0, 0, 0.897);">Andhra Pradesh, Arunachal
+                    Pradesh,
+                    Assam, Bihar, Chhattisgarh, Goa, Gujarat, Haryana, Himachal Pradesh,
+                    Jharkhand, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland,
+                    Odisha, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Uttar Pradesh, Uttarakhand, West Bengal
+                    are
+                    the states where TraveliQ is most active.</p>
+                <p style=" font-size: 20px; padding: 10px; color: rgba(0, 0, 0, 0.897);"><b>Travel IQ</b> has
+                    established
+                    itself as a landmark in the travel business.
+                    Since 2014, the company has been recognised by some of the world’s most prestigious airlines for its
+                    outstanding service delivery. This is due to the company’s constant focus on providing high-quality
+                    travel-related services to its clients while also keeping good connections. We offer complete
+                    assistance
+                    in booking vacation packages, hotels, bus services, travel insurance, assistance in obtaining a
+                    passport/visa, booking a cruise, and many more services.</p>
+
+            </div>
+            <!-- biglogoooooo -->
+
+            <div class="content" id="content2"><img src="/images/bigpic.jpg" alt="logo" width="547" height="772">
+
+                <div class="one">
+
+
+                    <div class="two" style="border-radius: 20px 20px 0 20px; background-color: white; ">
+                        <img src="/images/globe-solid.svg" alt="world" width="50px" height="50px">
+                        <p>Digital
+                            Promotion</p>
+                    </div>
+                    <div class="two" style="border-radius: 20px 20px 20px 0; background-color: #f85920;">
+                        <img src="/images/youtube-brands-solid.svg" alt="world" width="60px" height="55px">
+                        <p>YouTube Channel</p>
+                    </div>
+                    <div class="two" style="border-radius: 20px 0 20px 20px;background-color: #f85920; ">
+                        <img src="/images/clock-regular.svg" alt="world" width="40px" height="40px">
+                        <p>Book Tickets Anytime</p>
+                    </div>
+                    <div class="two" style="border-radius: 0 20px 20px 20px;background-color: white;">
+                        <img src="/images/message-regular.svg" alt="world" width="40px" height="40px">
+                        <img src="/images/comment-dots-regular.svg" alt="" width="20px" height="20px">
+                        <p>Online Chat Support</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <br>
+        <br>
+    </div>
+    <!-- part-4 -->
+    <!-- <div class="backimg" >
+        
+        <div class="content" style="position: absolute;">
+            <h1>prateeksha raghav</h1>
+           
+        </div>
+    </div> -->
+    <div class="fixed-background-box">
+        <div class="overlay">
+            <h1 style="font-weight: 700; color: #f85920;">Testimonial</h1>
+            <h1 style="color: white; font-size: 70px; font-weight: 800;">Agent Testimonials</h1>
+            <h3>Latest Reviews</h3>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <!-- slider -->
+    <div class="cc" style="margin-left: 30%; margin-top: -120px;">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" data-bs-interval="1000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>1Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>2Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>3Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>4Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>5Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>6Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="height: 300px; width: 600px; background-color: white; color: rgb(148, 145, 145); font-size: 20px; border-radius: 15px 15px 15px;  padding: 20px;">
+                    <p>7Singapore is a famous destination as it is clean, safe, green and well equipped with amazing
+                        tourist
+                        attractions. We appreciate Travel IQ for providing high-quality travel life.</p>
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px;">
+                    <img src="/images/star-solid (1).svg" alt="" style="margin-top: 10px; height: 20px; width: 30px; ">
+                    <br>
+                    <div style="display: flex; gap: 10px; margin-top:10px ;">
+                        <img src="/images/boyface.jpg" alt=""
+                            style="width: 50px; height: 50px; padding: 10px; border: 2px solid red; border-radius: 50%;">
+                        <div style="display: flex;  flex-direction: column;">
+                            <strong style="color: rgba(0, 0, 0, 0.932);">Danvendra Sharma </strong>
+                            <p style="font-size: 15px; ">Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- last -->
+    <div class="lastflex">
+        <div class="col"><img src="/images/lolo.png" alt="" width="300px" height="120px " style="margin:  50px;">
+            <p style="font-size: 20px;">Your Own Travel Intelligence</p>
+        </div>
+        <div class="col">
+            <li style=" font-size: 40px; font-weight: 800; color: rgba(0, 0, 0, 0.842) ;">Quick Links
+            </li>
+            <div style="background-color: #f85920; height: 3px; width: 200px;"></div>
+            <li class="li">About Us</li>
+            <li class="li"> Pay Now</li>
+            <li class="li"> Register Now</li>
+            <li class="li"> IRCTC Agent Registration</li>
+
+        </div>
+        <div class="col">
+            <li class="li" style=" font-size: 40px; font-weight: 800; color: rgba(0, 0, 0, 0.842) ;">Useful
+                Links</li>
+            <div style="background-color: #f85920; height: 3px; width: 200px;"></div>
+            <li class="li">Privacy Policy</li>
+            <li class="li">Terms and Conditions</li>
+            <li class="li">Refund & Cancellation Policy</li>
+        </div>
+        <div class="col">
+            <li class="li" style=" font-size: 40px; font-weight: 800; color: rgba(0, 0, 0, 0.842) ;">Work Hours
+            </li>
+            <div style="background-color: #f85920; height: 3px; width: 200px;"></div>
+            <li class="li">10:00 AM - 06 PM , Monday - Saturday</li>
+            <li class="li">We are available in above timings through</li>
+            <li class="li"></li>
+            <li class="li"> </li>
+            <li class="li"></li>
+            <li class="li"></li>
+        </div>
+        <div class="col"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
